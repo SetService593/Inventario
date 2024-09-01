@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Inventario y Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Inventario y Ventas</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de Producto</h2>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="product-name">Nombre:</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-purchase-price">Precio de Compra:</label>
+                    <input type="number" id="product-purchase-price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Precio de Venta:</label>
+                    <input type="number" id="product-price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-stock">Stock:</label>
+                    <input type="number" id="product-stock" required>
+                </div>
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Inventario</h2>
+            <table id="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio de Compra</th>
+                        <th>Precio de Venta</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulario de Venta</h2>
+            <form id="sales-form">
+                <div class="form-group">
+                    <label for="product-select">Producto:</label>
+                    <select id="product-select" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="customer-name">Nombre del Cliente:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Teléfono del Cliente:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="sale-date">Fecha de Venta:</label>
+                    <input type="date" id="sale-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="payment-type">Tipo de Pago:</label>
+                    <select id="payment-type" required>
+                        <option value="cash">Efectivo</option>
+                        <option value="credit">Crédito</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sale-quantity">Cantidad:</label>
+                    <input type="number" id="sale-quantity" required>
+                </div>
+                <button type="submit">Registrar Venta</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Ventas</h2>
+            <table id="sales-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cliente</th>
+                        <th>Teléfono</th>
+                        <th>Fecha</th>
+                        <th>Tipo de Pago</th>
+                        <th>Cantidad</th>
+                        <th>Monto</th>
+                        <th>Ganancia</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulario de Retiro</h2>
+            <form id="withdrawals-form">
+                <div class="form-group">
+                    <label for="withdrawal-amount">Monto de Retiro:</label>
+                    <input type="number" id="withdrawal-amount" step="0.01" required>
+                </div>
+                <button type="submit">Registrar Retiro</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Retiros</h2>
+            <table id="withdrawals-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Totales</h2>
+            <p id="total-profit">Ganancia Total: $0.00</p>
+            <p id="total-balance">Saldo Disponible: $0.00</p>
+            <p id="pending-total">Total Pendiente: $0.00</p>
+        </section>
+
+        <section>
+            <h2>Reinicio de Datos</h2>
+            <form id="reset-form">
+                <div class="form-group">
+                    <label for="reset-password">Contraseña:</label>
+                    <input type="password" id="reset-password" required>
+                </div>
+                <button type="submit">Reiniciar Datos</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
